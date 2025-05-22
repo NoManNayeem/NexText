@@ -1,0 +1,67 @@
+# ==== Root-level .gitignore for NexText ====
+!.env.example
+# OS/system junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pip-log.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+*.sqlite3
+*.db
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# FastAPI settings
+backend/.env
+backend/nextext.db
+
+# Node
+node_modules/
+frontend/.next/
+frontend/.env.local
+frontend/.env
+
+# Next.js build output
+frontend/out/
+
+# IDE/editor junk
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Docker
+*.pid
+*.bak
+*.swp
+docker-compose.override.yml
+
+# Optional: ignore compiled frontend build
+frontend/build/
+
+# Optional: macOS metadata
+*.DS_Store
+
+# Optional: test coverage
+coverage/
+htmlcov/
+
+# Ignore uploads/temp (if added later)
+uploads/
+tmp/
