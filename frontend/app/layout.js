@@ -1,9 +1,8 @@
 // frontend/app/layout.js
-
 import { Geist, Geist_Mono } from "next/font/google";
 import Providers from "@/components/Providers";
 import "./globals.css";
-import { AnimatePresence } from "framer-motion";
+import PageTransition from "@/components/PageTransition";
 
 // Importing font variables
 const geistSans = Geist({
@@ -33,9 +32,7 @@ export default function RootLayout({ children }) {
     >
       <body className="font-sans text-base antialiased bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300 ease-in-out min-h-screen flex flex-col">
         <Providers>
-          <AnimatePresence mode="wait">
-            {children}
-          </AnimatePresence>
+          <PageTransition>{children}</PageTransition>
         </Providers>
       </body>
     </html>
